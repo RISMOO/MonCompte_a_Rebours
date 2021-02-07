@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+.video
+{
+position: absolute;
+bottom: 0px;
+right: 0px;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1000;
+overflow: hidden;
+}
+
+
+body
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("img/playa.jpg")no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-weight: 'Yusei Magic',sans-serif;
+    height: 100vh;
+    color: white;
+
+}
+
+/*ombre de superpostion*/
+body::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-color: rgba(0,0,0,.55);
+}
+
+/*tous les enfants du body seront au dessus du background*/
+
+body *
+
+{
+z-index: 1;
+
+}
+
+.year
+
+{
+
+    font-size: 10rem;
+    z-index:-1 ;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    color:rgb(0, 60, 255);
+  
+  
+}
+
+h1 {
+ font-size: 60px;
+ margin: -60px 0 40px;/* -60 en haut 0 a gauche et a droite et 40 px en bas*/
+
+
+}
+
+.countdown
+{
+display: flex;
+visibility: hidden;
+opacity: 0;
+transform: scale(2);/* on agrandi le texte*/
+transition:opacity 0.3s ease, visibility 0.3s ease;
+
+}
+
+.time
+
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+    
+}
+
+.loading
+{
+
+    position: absolute;
+    width: 300px;
+    height: auto;
+    opacity: 0.50;
+    transition: 0.3s ease;
+    color:red;
+    margin-bottom: 2%;
+}
+
+.rismo
+{
+
+    position: absolute;
+    width: 100px;
+    transition: 0.3s ease;
+    color:red;
+    margin-top: 15%;
+    margin-left: -2%;
+    
+}
+
+
+.time h2 
+{
+
+    margin: 0 0 5px;
+}
+@media (max-width:600px) {
+
+    .year
+
+    {
+font-size: 5rem;
+top: 100px;
+margin-top: 20%;
+    }
+
+    h1{
+
+        font-size: 30px;
+
+        
+    }
+    .time
+    {
+
+        margin: 5px;
+    }
+
+    .time h2 
+{
+
+    margin: 0;
+    font-size: 12px;
+}
+
+.rismo
+{
+
+    position: absolute;
+    width: 100px;
+    transition: 0.3s ease;
+    color:red;
+    margin-top: 15%;
+    margin-left: -9%;
+    visibility: hidden;
+
+    
+}
+
+
+.time small
+
+{
+
+    font-size: 10px;
+}
+}
