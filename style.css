@@ -146,21 +146,22 @@ margin-top: 20%;
 
     h1{
 
-        font-size: 30px;
+        font-size: 25px;
+        margin-top: 2%;
 
         
     }
     .time
     {
 
-        margin: 5px;
+        margin: 1px;
     }
 
     .time h2 
 {
 
     margin: 0;
-    font-size: 12px;
+    font-size: 8px;
 }
 
 .rismo
@@ -177,11 +178,29 @@ margin-top: 20%;
     
 }
 
+.countdown
+{
+display: flex;
+visibility: hidden;
+opacity: 0;
+transform: scale(2);/* on agrandi le texte*/
+transition:opacity 0.3s ease, visibility 0.3s ease;
+
+}
+
 
 .time small
 
 {
 
-    font-size: 10px;
+    font-size: 8px;
+}
+
+#days, #hours, #minutes, #secondes
+
+{
+
+    font-size: 15px;
+    margin: 8px;
 }
 }
